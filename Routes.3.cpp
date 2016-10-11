@@ -94,7 +94,6 @@ const Leg ShortestRoute::lary[] = {
 };
 
 int main(){
-
   cout << "Programmer: Dhanush Patel\n";
   cout << "Programmer's ID: 1553428\n";
   cout << "File: " << __FILE__ << "\n\n";
@@ -138,7 +137,6 @@ const Route ShortestRoute::shortestRoute(const char* const start, const char* co
     }
   }
   return *(s.begin());
-  cout << "gh";
 }
 
 bool operator<(const Route& a, const Route& b)
@@ -166,7 +164,6 @@ Route::Route(const Leg& leg) : dist(leg.getDist()){
 
 Route::Route(const Route& route, const Leg& leg)
         : legs(route.legs), dist(route.dist+leg.dist){
-
     if (strcmp(route.legs.back()->endCity, leg.startCity) != 0)
       throw "Mismatch";
 
